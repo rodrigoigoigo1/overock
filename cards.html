@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Overock Floripa</title>
+    
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="http://www.youtube.com/@rodrigo45554555">Sobre</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="https://rodrigoigoigo1.github.io/curriculo/">Contato</a></li>
+            
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="product">
+                <div class="image">
+                    <img class="product-image" src="guitarra1.png" alt="Imagem do Produto">
+                </div>
+                <div class="color">
+                    <span class="orange active" data-image="guitarra1.png" data-color="#DE522F"></span>
+                    <span class="green" data-image="guitarra2.png" data-color="#9ABE62"></span>
+                    <span class="black" data-image="guitarra3.jpg" data-color="#222627"></span>
+                    <span class="red" data-image="guitarra4.jpg" data-color="#B41D26"></span>
+                </div>
+                <div class="title">
+                    Instrumentos disponíveis
+                </div>
+                <div class="detail">
+    <p>Preço: <span>$50</span></p>
+    <a href="https://www.instagram.com/overockdose?igsh=MWg4OTRyc3Y3enR1ZQ==" target="_blank" class="button-link">Comprar!</a> <!-- Corrigido o link e a classe -->
+</div>
+            </div>
+        </div>
+    </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(".color span").click(function() {
+            $(".color span").removeClass("active");
+            $(this).addClass("active");
+            $(".detail span").css("color", $(this).attr("data-color"));
+            $(".detail a").css("background", $(this).attr("data-color"));
+            $(".product-image").attr("src", $(this).attr("data-image"));
+        });
+    </script>
+
+</body>
+</html>
