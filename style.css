@@ -24,8 +24,7 @@ body {
     display: inline;
     justify-content: center;
     align-items: center;
-    background-image: url(fundo.jpg);
-}
+    }
 
 .container {
     width: 100%;
